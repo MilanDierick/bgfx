@@ -12,6 +12,8 @@
 
 #include "topology.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wtautological-constant-compare"
 #if BX_PLATFORM_OSX || BX_PLATFORM_IOS
 #	include <objc/message.h>
 #elif BX_PLATFORM_WINDOWS
@@ -5901,3 +5903,5 @@ namespace bgfx
 } // namespace bgfx
 
 #include "bgfx.idl.inl"
+
+#pragma clang diagnostic pop

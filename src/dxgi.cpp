@@ -5,6 +5,8 @@
 
 #include "bgfx_p.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 #if BGFX_CONFIG_RENDERER_DIRECT3D11 || (BGFX_CONFIG_RENDERER_DIRECT3D12 && !BX_PLATFORM_LINUX)
 
 #include "dxgi.h"
@@ -795,3 +797,5 @@ namespace bgfx
 } // namespace bgfx
 
 #endif // BGFX_CONFIG_RENDERER_DIRECT3D11 || BGFX_CONFIG_RENDERER_DIRECT3D12
+
+#pragma clang diagnostic pop

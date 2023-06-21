@@ -5,6 +5,8 @@
 
 #include "bgfx_p.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 #if BGFX_CONFIG_RENDERER_DIRECT3D9
 #	include "renderer_d3d9.h"
 #	include <bx/pixelformat.h>
@@ -4604,3 +4606,5 @@ namespace bgfx { namespace d3d9
 } /* namespace d3d9 */ } // namespace bgfx
 
 #endif // BGFX_CONFIG_RENDERER_DIRECT3D9
+
+#pragma clang diagnostic pop

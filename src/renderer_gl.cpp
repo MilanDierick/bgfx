@@ -5,6 +5,8 @@
 
 #include "bgfx_p.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wtautological-constant-compare"
 #if (BGFX_CONFIG_RENDERER_OPENGLES || BGFX_CONFIG_RENDERER_OPENGL)
 #	include "renderer_gl.h"
 #	include <bx/timer.h>
@@ -8850,3 +8852,5 @@ namespace bgfx { namespace gl
 } /* namespace gl */ } // namespace bgfx
 
 #endif // (BGFX_CONFIG_RENDERER_OPENGLES || BGFX_CONFIG_RENDERER_OPENGL)
+
+#pragma clang diagnostic pop
